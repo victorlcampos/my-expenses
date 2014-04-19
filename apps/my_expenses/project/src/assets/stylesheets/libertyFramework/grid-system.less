@@ -1,0 +1,49 @@
+@import "elements.less";
+
+@grid-width: 960px;
+@max-column: 16;
+@gutters: 20px;
+
+
+*, *:after, *:before {
+  .box-sizing(border-box);
+}
+
+.grid {
+  max-width: @grid-width;
+  margin: 0 auto;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: @gutters;
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.grid-pad {
+  padding: @gutters 0 @gutters @gutters;
+
+  > [class*='col-']:last-of-type {
+    padding-right: @gutters;
+  }
+}
+
+.col-classes (@i) when (@i > 0) {
+
+  .col-@{i}-@{max-column} {
+    width: unit((@i*100)/@max-column, ~"%");
+  }
+
+  .col-classes(@i - 1);
+}
+.col-classes (0) {}
+.col-classes (@max-column);

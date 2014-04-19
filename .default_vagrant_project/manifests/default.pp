@@ -61,8 +61,6 @@ class install_nodeJS {
   }
 
   package { [
-      'gulp',
-      'bower',
       'grunt-init'
     ]:
     provider => npm,

@@ -22,7 +22,8 @@
     "run-sequence": "~0.3.6",
     "gulp-template": "~0.1.1",
     "gulp-gzip": "0.0.5",
-    "gulp-bower": "0.0.4"
+    "gulp-bower": "0.0.4",
+    "karma": "^0.12.9"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

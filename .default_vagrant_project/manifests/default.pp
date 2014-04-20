@@ -57,7 +57,8 @@ class { 'install_packages': stage => packages }
 
 class install_nodeJS {
   class { 'nodejs':
-    version => 'stable'
+    version => 'stable',
+    target_dir => '/usr/bin/'
   }
 
   package { [

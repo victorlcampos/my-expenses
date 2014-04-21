@@ -23,7 +23,6 @@ var scripts_to_process = [
   './src/assets/vendor/angular/angular.js',
   './src/assets/vendor/angular-route/angular-route.js',
   './src/assets/vendor/angular-resource/angular-resource.js',
-  './src/assets/vendor/angular-cookies/angular-cookies.js',
   './src/assets/javascripts/**/*.js'
 ]
 

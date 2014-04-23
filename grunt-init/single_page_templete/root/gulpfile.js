@@ -12,7 +12,8 @@ var gulp        = require('gulp'),
     minHtml     = require('gulp-minify-html'),
     gzip        = require('gulp-gzip'),
     bower       = require('gulp-bower'),
-    karma       = require('gulp-karma');
+    karma       = require('gulp-karma'),
+    protractor  = require("gulp-protractor").protractor;
 
 var styles_to_process = [
   './src/assets/vendor/normalize.css/normalize.css',
@@ -72,6 +73,13 @@ gulp.task('unit-test', function () {
             configFile: 'test/karma.config.js',
             action: 'watch'
           }));
+});
+
+gulp.task('e2e-test', function () {
+  var testFiles = [ 'test/e2e/**/*.js' ]
+  return gulp.src(testFiles)
+          .pipe(protractor({ configFile: "test/protractor-conf.js" }))
+          .on('error', function(e) { throw e })
 });
 
 gulp.task('build', function() {

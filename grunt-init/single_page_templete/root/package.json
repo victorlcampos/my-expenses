@@ -30,7 +30,8 @@
     "phantomjs": "^1.9.7-3",
     "protractor": "^0.21.0",
     "selenium-standalone": "^2.41.0-2.9.0",
-    "gulp-karma": "0.0.4"
+    "gulp-karma": "0.0.4",
+    "gulp-protractor": "0.0.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

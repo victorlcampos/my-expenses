@@ -79,3 +79,10 @@ Esse comando irá subir uma container e instalar todos as as dependências descr
         gulp
     ```
     Pronto, se você acessar o seu browser: http://localhost:8080 você deve ver hello world escrito na tela
+
+## Próximos Passos:
+-------------------------------------
+
+1. Adicionar test ao template de micro serviço baseado em express.
+2. Adicionar micro serviço de autenticação.
+3. Transformar cada app/micro serviço/grunt-init/puppet-module em um projeto do github e criar um instalador. A ideia é ter o projeto do Liberty, somente com o intall.sh e um dependences.json e ao rodar o script ele fazer o clone de cada app/micro serviço/grunt-init/puppet-module necessário, facilitando assim o reuso de app/micro serviço/grunt-init/puppet-module em projetos diferentes.

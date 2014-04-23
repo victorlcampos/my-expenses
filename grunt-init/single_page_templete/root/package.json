@@ -1,7 +1,7 @@
 {
-  "name": "{%= name %}-client",
+  "name": "myExpenses-client",
   "version": "0.0.0",
-  "description": "{%= description %}",
+  "description": "Controlador de despesas pessoais",
   "main": "app.js",
   "dependencies": {
     "node-static": "~0.7.3",
@@ -31,7 +31,8 @@
     "protractor": "^0.21.0",
     "selenium-standalone": "^2.41.0-2.9.0",
     "gulp-karma": "0.0.4",
-    "gulp-protractor": "0.0.7"
+    "gulp-protractor": "0.0.7",
+    "karma-ng-html2js-preprocessor": "^0.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

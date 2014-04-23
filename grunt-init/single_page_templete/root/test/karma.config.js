@@ -16,8 +16,16 @@ module.exports = function(config) {
         plugins: [
             'karma-junit-reporter',
             'karma-jasmine',
-            'karma-phantomjs-launcher'
+            'karma-phantomjs-launcher',
+            'karma-ng-html2js-preprocessor'
         ],
+        preprocessors: {
+            'src/**/*.html': ['ng-html2js']
+        },
+        ngHtml2JsPreprocessor: {
+          stripPrefix: 'src/',
+          'moduleName': 'templates',
+        },
 
         junitReporter: {
             outputFile: 'test_out/unit.xml',

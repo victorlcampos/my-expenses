@@ -12,9 +12,9 @@
         * Pacote responsável por armazenar templates de projetos contendo o esqueleto de alguns projetos básicos, como uma single page que mostra hello world na tela.
         * Essa pasta é compartilhada com todos apps e microserviços.
         * Dentro de uma app ou microserviço, basta executar
-        ´´´shell
+        ```sh
             grunt-init ~/.grunt-init/<nome do template>
-        ´´´
+        ```
     + puppet-modules
         * Pacote responsável por armazenar modulos do puppet que serão usados para subir a máquina virtual(Docker)
 

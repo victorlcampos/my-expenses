@@ -6,7 +6,7 @@ exports.config = {
   ],
   capabilities: {
     'browserName': 'phantomjs',
-    'phantomjs.binary.path':'../node_modules/.bin/phantomjs',
+    'phantomjs.binary.path':'node_modules/.bin/phantomjs',
     'phantomjs.cli.args':['--webdriver=8080']
   },
   baseUrl: 'http://localhost:8080/',

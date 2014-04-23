@@ -29,7 +29,8 @@
     "karma-junit-reporter": "^0.2.2",
     "phantomjs": "^1.9.7-3",
     "protractor": "^0.21.0",
-    "selenium-standalone": "^2.41.0-2.9.0"
+    "selenium-standalone": "^2.41.0-2.9.0",
+    "gulp-karma": "0.0.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

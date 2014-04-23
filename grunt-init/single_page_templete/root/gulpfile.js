@@ -11,7 +11,8 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     minHtml     = require('gulp-minify-html'),
     gzip        = require('gulp-gzip'),
-    bower       = require('gulp-bower');
+    bower       = require('gulp-bower'),
+    karma       = require('gulp-karma');
 
 var styles_to_process = [
   './src/assets/vendor/normalize.css/normalize.css',
@@ -30,13 +31,18 @@ var scripts_to_process = [
 // ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*
 gulp.task('default', ['build', 'nodemon', 'watch']);
 
+gulp.task('bower', function(){
+  return bower();
+});
+
 gulp.task('clean', function(){
   return gulp.src('./build/')
     .pipe(clean({force: true}));
 });
 
-gulp.task('bower', function(){
-  return bower();
+gulp.task('html', function() {
+  return gulp.src('./src/**/*.html')
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('styles', function() {
@@ -55,13 +61,21 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('html', function() {
-  return gulp.src('./src/**/*.html')
-    .pipe(gulp.dest('./build/'));
+gulp.task('unit-test', function () {
+  var testFiles = scripts_to_process.concat([
+                    'src/assets/vendor/angular-mocks/angular-mocks.js',
+                    'test/unit/**/*.test.js'
+                  ]);
+
+  return gulp.src(testFiles)
+          .pipe(karma({
+            configFile: 'test/karma.config.js',
+            action: 'watch'
+          }));
 });
 
 gulp.task('build', function() {
-  runSequence('clean', 'bower', 'html', 'styles', 'scripts');
+  runSequence('bower', 'clean', 'html', 'styles', 'scripts', 'unit-test');
 });
 
 gulp.task('nodemon', function () {

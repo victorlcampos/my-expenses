@@ -26,28 +26,28 @@
 ## Como usar:
 -------------------------------------
 Dentro da pasta Liberty
-´´´shell
+```shell
     ./create.sh (app|microservice) <nome>
-´´´
+```
 Esse comando irá criar a estrutura padrão de uma app ou microserviço, configurando o vagrant para usar o Docker como provider e o puppet como provision
 
 Dentro da pasta da app|microservice criada
-´´´shell
+```shell
     vagrant up --provider=docker
     vagrant ssh
-´´´
+```
 Esse comando irá subir uma container e instalar todos as as dependências descritas no arquivo default.pp contido na pasta manifest e depois se conectar via ssh a esse container criado.
 
 ## Exemplo:
 -------------------------------------
 1. Como criar uma single page app
     Dentro da pasta Liberty:
-    ´´´shell
+    ```sh
         ./create.sh app exampleApp
         cd app/exampleApp
-    ´´´
+    ```
     Adicionar o 'gulp', 'bower' e 'karma-cli' ao default.pp, ficando com algo mais ou menos assim a classe install_nodeJS:
-    ´´´ruby
+    ```ruby
         class install_nodeJS {
           class { 'nodejs':
             version => 'stable'
@@ -64,18 +64,18 @@ Esse comando irá subir uma container e instalar todos as as dependências descr
             require => Class['nodejs']
           }
         }
-    ´´´
+    ```
 
     Levantar o container:
-    ´´´shell
+    ```sh
         vagrant up --provider=docker
         vagrant ssh
-    ´´´
+    ```
     Já dentro do container:
-    ´´´shell
+    ```sh
         cd /vagrant
         grunt-init ~/.grunt-init/single_page_template
         npm install
         gulp
-    ´´´
+    ```
     Pronto, se você acessar o seu browser: http://localhost:8080 você deve ver hello world escrito na tela

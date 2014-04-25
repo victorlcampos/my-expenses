@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  var subjectsController = app.controllers.subjectsController;
+  var postsController = app.controllers.postsController;
 
   app.post('/posts'      , postsController.create );
   app.get('/posts'       , postsController.list   );

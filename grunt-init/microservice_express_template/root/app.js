@@ -34,9 +34,6 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-console.log(dbUrls[process.env.NODE_ENV || "development"]);
-console.log(process.env.MONGOHQ_URL);
-
 app.database = db.connect(dbUrls[process.env.NODE_ENV || "development"]);
 
 load('models')
@@ -47,3 +44,5 @@ load('models')
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+exports.app = app

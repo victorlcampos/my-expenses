@@ -1,5 +1,10 @@
 .DS_Store
 
-apps
-grunt-init-templates
-puppet-modules
+apps/*
+!.gitkeep
+grunt-init-templates/*
+!.gitkeep
+puppet-modules/*
+!.gitkeep
+microservices/*
+!.gitkeep

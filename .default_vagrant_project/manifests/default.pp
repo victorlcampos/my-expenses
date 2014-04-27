@@ -33,6 +33,7 @@ class install_packages {
               'libfontconfig1',
               'python',
               'g++',
+              'gcc',
               'make',
               'wget',
               'tar',
@@ -47,7 +48,7 @@ class install_packages {
               'libxml2-dev',
               'libxslt1-dev',
               'sqlite3',
-              'libsqlite3-dev',
+              'libsqlite3-dev'
             ]:
     ensure => present
   }

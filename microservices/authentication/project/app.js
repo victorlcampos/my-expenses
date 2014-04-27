@@ -39,7 +39,7 @@ if ('development' == app.get('env')) {
 }
 
 var databaseUrl = dbUrls[process.env.NODE_ENV || "development"];
-app.database = db.connect(databaseUrl);
+app.database    = db.connect(databaseUrl);
 
 load('models')
   .then('controllers')

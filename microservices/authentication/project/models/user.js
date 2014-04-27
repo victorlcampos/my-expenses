@@ -1,9 +1,8 @@
 module.exports = function(app) {
-  var db = app.database;
-
-  var timestamps = require('mongoose-timestamp');
-
-  var Schema = require('mongoose').Schema;
+  var db         = app.database,
+      timestamps = require('mongoose-timestamp'),
+      Schema     = require('mongoose').Schema,
+      crypto     = require('crypto');
 
   var User = new Schema({
     email: {

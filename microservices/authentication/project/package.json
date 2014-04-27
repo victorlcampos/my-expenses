@@ -14,12 +14,14 @@
     "mongoose": "~3.8.8",
     "passport": "^0.2.0",
     "connect-mongo": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "crypto": "0.0.3"
   },
   "devDependencies": {
     "mocha": "^1.18.2",
     "supertest": "^0.11.0",
     "should": "^3.3.1",
-    "pow-mongoose-fixtures": "^0.3.0"
+    "pow-mongoose-fixtures": "^0.3.0",
+    "passport-stub": "^0.2.0"
   }
 }

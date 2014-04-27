@@ -1,0 +1,8 @@
+microservice        authentication                github_url
+grunt-init-template microservice_express_template github_url
+grunt-init-template single_page_template          github_url
+puppet-module       puppetlabs-apt
+puppet-module       saz-locales
+puppet-module       puppetlabs-mongodb
+puppet-module       willdurand-nodejs
+puppet-module       maestrodev-wget

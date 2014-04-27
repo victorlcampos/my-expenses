@@ -1,3 +1,4 @@
+app                 singlePage                    git@github.com:victorlcampos/my-expenses-single-page.git
 microservice        authentication                git@github.com:victorlcampos/liberty-authentication.git
 grunt-init-template microservice_express_template git@github.com:victorlcampos/liberty-microservice-express-template.git
 grunt-init-template single_page_template          git@github.com:victorlcampos/liberty-single-page-template.git

@@ -2,8 +2,11 @@ app                 singlePage                    git@github.com:victorlcampos/m
 microservice        authentication                git@github.com:victorlcampos/liberty-authentication.git
 grunt-init-template microservice_express_template git@github.com:victorlcampos/liberty-microservice-express-template.git
 grunt-init-template single_page_template          git@github.com:victorlcampos/liberty-single-page-template.git
+puppet-module       maestrodev/rvm
+puppet-module       akumria-postgresql
 puppet-module       puppetlabs-apt
-puppet-module       saz-locales
+puppet-module       puppetlabs-java
 puppet-module       puppetlabs-mongodb
 puppet-module       willdurand-nodejs
 puppet-module       maestrodev-wget
+puppet-module       saz-locales
